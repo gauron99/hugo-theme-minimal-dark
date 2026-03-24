@@ -1,0 +1,9 @@
+<header>
+  <nav>
+    <a href="{{ "/" | relURL }}"><strong>{{ .Site.Title }}</strong></a>
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}" style="margin-left: 1em;">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+  <hr>
+</header>

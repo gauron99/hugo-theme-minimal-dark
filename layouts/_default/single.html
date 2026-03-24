@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <p style="color: var(--text-muted);">
+    {{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} min read
+  </p>
+  {{ .Content }}
+  {{ with .GetTerms "tags" }}
+    <p>
+      {{ range . }}
+        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+      {{ end }}
+    </p>
+  {{ end }}
+{{ end }}

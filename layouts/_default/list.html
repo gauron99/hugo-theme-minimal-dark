@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ range .Pages }}
+    <p>
+      <span style="color: var(--text-muted);">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </p>
+  {{ end }}
+  {{ template "_internal/pagination.html" . }}
+{{ end }}

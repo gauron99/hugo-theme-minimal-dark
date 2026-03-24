@@ -1,0 +1,6 @@
+name = "Minimal Dark"
+license = "MIT"
+description = "A warm, dark, minimal Hugo theme"
+min_version = "0.120.0"
+[author]
+  name = ""
